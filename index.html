@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clothe Bazar</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.12.0/dist/sweetalert2.all.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.12.0/dist/sweetalert2.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="form-table-container">
+            <div class="form-container">
+                <form id="clothe-form">
+                    <label for="marcaClothe">Prenda:</label>
+                    <input id="marcaClothe" type="text" name="marcaClothe" required><br><br>
+
+                    <label for="tallaClothe">Talla:</label>
+                    <input id="tallaClothe" type="text" name="tallaClothe" required><br><br>
+
+                    <label for="idClothe">ID:</label>
+                    <input id="idClothe" type="text" name="idClothe" required><br><br>
+
+                    <label for="precioClothe">Precio:</label>
+                    <input id="precioClothe" type="number" step="0.01" name="precioClothe" required><br><br>
+
+                    <label for="cantidadClothe">Cantidad de prendas:</label>
+                    <input id="cantidadClothe" type="number" name="cantidadClothe" required><br><br>
+
+                    <label for="fechaClothe">Fecha:</label>
+                    <input id="fechaClothe" type="date" name="fechaClothe" required><br><br>
+
+                    <button id="clothes-btn" type="button">Enviar</button>
+                </form>
+            </div>
+
+            <div class="search-container">
+                <label for="buscar">Buscar ropa por precio:</label>
+                <input type="number" id="buscar" name="buscar" step="0.01" placeholder="Ingrese el precio de la prenda a buscar">
+                <button id="search-btn" type="button">Buscar</button><br><br>
+
+                <button id="min-btn" type="button">Buscar valor mínimo</button>
+                <button id="max-btn" type="button">Buscar valor máximo</button>
+                
+                <button id="show-all-btn" type="button">Mostrar Productos</button>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Marca</th>
+                            <th>Talla</th>
+                            <th>ID</th>
+                            <th>Precio</th>
+                            <th>Cantidad</th>
+                            <th>Fecha</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Los datos se añadirán aquí mediante JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script type="module" src="./src/controllers/script.js"></script>
+</body>
+</html>
